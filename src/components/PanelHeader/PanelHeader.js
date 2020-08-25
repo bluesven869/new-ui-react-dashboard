@@ -9,6 +9,7 @@
 * Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
+* Upgrade by bluesven869
 
 =========================================================
 
@@ -17,21 +18,17 @@
 */
 import React from "react";
 
-class PanelHeader extends React.Component {
-  render() {
-    return (
-      <div
-        className={
-          "panel-header " +
-          (this.props.size !== undefined
-            ? "panel-header-" + this.props.size
-            : "")
-        }
-      >
-        {this.props.content}
-      </div>
-    );
-  }
+function PanelHeader() {
+  return (
+    <div
+      className={
+        "panel-header " +
+        (this.props.size !== undefined ? "panel-header-" + this.props.size : "")
+      }
+    >
+      {this.props.content}
+    </div>
+  );
 }
 
 export default PanelHeader;
