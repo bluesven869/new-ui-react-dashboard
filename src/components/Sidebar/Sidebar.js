@@ -47,7 +47,7 @@ function Sidebar(props) {
   // verifies if routeName is the one active (in browser input)
   const activeRoute = useCallback((routeName) => {
     return props.location.pathname.indexOf(routeName) > -1 ? "active" : "";
-  }, []);
+  }, [props.location.pathname]);
 
   return (
     <div className="sidebar" data-color={props.backgroundColor}>
@@ -66,7 +66,7 @@ function Sidebar(props) {
           className="simple-text logo-normal"
           target="_blank"
         >
-          Creative Tim
+          Creative Tim (bluesven869+)
         </a>
       </div>
       <div className="sidebar-wrapper" ref={sidebar}>
