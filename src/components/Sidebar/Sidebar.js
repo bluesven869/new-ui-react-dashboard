@@ -66,7 +66,7 @@ function Sidebar(props) {
           className="simple-text logo-normal"
           target="_blank"
         >
-          Creative Tim (bluesven869+)
+          Creative Tim <br />bluesven869
         </a>
       </div>
       <div className="sidebar-wrapper" ref={sidebar}>
