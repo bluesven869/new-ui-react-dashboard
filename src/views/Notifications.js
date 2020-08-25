@@ -9,7 +9,7 @@
 * Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
-
+* Upgraded by bluesven869
 =========================================================
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
