@@ -1,6 +1,6 @@
 {
-  "name": "now-ui-dashboard-react",
-  "version": "1.4.0",
+  "name": "new-ui-dashboard-react",
+  "version": "1.4.1",
   "main": "dist/index.js",
   "private": true,
   "homepage": "https://demos.creative-tim.com/now-ui-dashboard-react/#/",
@@ -28,9 +28,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
-    "compile-sass": "node-sass src/assets/scss/now-ui-dashboard.scss src/assets/css/now-ui-dashboard.css",
-    "minify-sass": "node-sass src/assets/scss/now-ui-dashboard.scss src/assets/css/now-ui-dashboard.min.css --output-style compressed",
-    "map-sass": "node-sass src/assets/scss/now-ui-dashboard.scss src/assets/css/now-ui-dashboard.css --source-map true"
+    "compile-sass": "node-sass src/assets/scss/new-ui-dashboard.scss src/assets/css/new-ui-dashboard.css",
+    "minify-sass": "node-sass src/assets/scss/new-ui-dashboard.scss src/assets/css/new-ui-dashboard.min.css --output-style compressed",
+    "map-sass": "node-sass src/assets/scss/new-ui-dashboard.scss src/assets/css/new-ui-dashboard.css --source-map true"
   },
   "optionalDependencies": {
     "@types/googlemaps": "3.39.6",

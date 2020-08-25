@@ -9,7 +9,7 @@ gulp.task("licenses", async function () {
       gap.prependText(`/*!
 
 =========================================================
-* Now UI Dashboard React - v1.4.0
+* New UI Dashboard React - v1.4.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
@@ -32,7 +32,7 @@ gulp.task("licenses", async function () {
       gap.prependText(`/*!
 
   =========================================================
-  * Now UI Dashboard React - v1.4.0
+  * New UI Dashboard React - v1.4.0
   =========================================================
 
   * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
@@ -55,7 +55,7 @@ gulp.task("licenses", async function () {
       gap.prependText(`<!--
 
 =========================================================
-* Now UI Dashboard React - v1.4.0
+* New UI Dashboard React - v1.4.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
@@ -78,7 +78,7 @@ gulp.task("licenses", async function () {
       gap.prependText(`/*!
 
 =========================================================
-* Now UI Dashboard React - v1.4.0
+* New UI Dashboard React - v1.4.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react

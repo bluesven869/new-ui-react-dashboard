@@ -1,0 +1,54 @@
+/*!
+
+ =========================================================
+ * Now UI Dashboard React - v1.4.0 based on Now UI Dashboard - v1.3.0
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/new-ui-dashboard-react
+ * Copyright 2020 Creative Tim (http://www.creative-tim.com)
+
+ * Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+@import 'new-ui-dashboard/variables';
+@import 'new-ui-dashboard/mixins';
+
+// Plugins CSS
+@import "new-ui-dashboard/plugins/plugin-animate-bootstrap-notify";
+@import "new-ui-dashboard/plugins/plugin-perfect-scrollbar";
+
+// Core CSS
+@import "new-ui-dashboard/buttons";
+@import "new-ui-dashboard/inputs";
+@import "new-ui-dashboard/typography";
+@import "new-ui-dashboard/misc";
+@import "new-ui-dashboard/checkboxes-radio";
+
+// components
+@import "new-ui-dashboard/navbar";
+@import "new-ui-dashboard/page-header";
+@import "new-ui-dashboard/dropdown";
+@import "new-ui-dashboard/alerts";
+@import "new-ui-dashboard/images";
+@import "new-ui-dashboard/nucleo-outline";
+@import "new-ui-dashboard/tables";
+@import "new-ui-dashboard/sidebar-and-main-panel";
+@import "new-ui-dashboard/footers";
+@import "new-ui-dashboard/fixed-plugin";
+
+// cards
+@import "new-ui-dashboard/cards";
+@import "new-ui-dashboard/cards/card-plain";
+@import "new-ui-dashboard/cards/card-chart";
+@import "new-ui-dashboard/cards/card-user";
+@import "new-ui-dashboard/cards/card-map";
+
+@import "new-ui-dashboard/responsive";
+
+// react
+@import "new-ui-dashboard/react/react-differences";
