@@ -9,14 +9,14 @@
 * Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
-
+* Upgrade by bluesven869
 =========================================================
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
 /*eslint-disable*/
-import React from "react";
+import React, { useEffect, useCallback, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { Nav } from "reactstrap";
 // javascript plugin used to create scrollbars on windows
@@ -26,77 +26,76 @@ import logo from "logo-white.svg";
 
 var ps;
 
-class Sidebar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.activeRoute.bind(this);
-  }
-  // verifies if routeName is the one active (in browser input)
-  activeRoute(routeName) {
-    return this.props.location.pathname.indexOf(routeName) > -1 ? "active" : "";
-  }
-  componentDidMount() {
+function Sidebar(props) {
+  const sidebar = useRef(null);
+
+  useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
-      ps = new PerfectScrollbar(this.refs.sidebar, {
+      ps = new PerfectScrollbar(sidebar, {
         suppressScrollX: true,
         suppressScrollY: false,
       });
     }
-  }
-  componentWillUnmount() {
-    if (navigator.platform.indexOf("Win") > -1) {
-      ps.destroy();
-    }
-  }
-  render() {
-    return (
-      <div className="sidebar" data-color={this.props.backgroundColor}>
-        <div className="logo">
-          <a
-            href="https://www.creative-tim.com?ref=nudr-sidebar"
-            className="simple-text logo-mini"
-            target="_blank"
-          >
-            <div className="logo-img">
-              <img src={logo} alt="react-logo" />
-            </div>
-          </a>
-          <a
-            href="https://www.creative-tim.com?ref=nudr-sidebar"
-            className="simple-text logo-normal"
-            target="_blank"
-          >
-            Creative Tim
-          </a>
-        </div>
-        <div className="sidebar-wrapper" ref="sidebar">
-          <Nav>
-            {this.props.routes.map((prop, key) => {
-              if (prop.redirect) return null;
-              return (
-                <li
-                  className={
-                    this.activeRoute(prop.layout + prop.path) +
-                    (prop.pro ? " active active-pro" : "")
-                  }
-                  key={key}
-                >
-                  <NavLink
-                    to={prop.layout + prop.path}
-                    className="nav-link"
-                    activeClassName="active"
-                  >
-                    <i className={"now-ui-icons " + prop.icon} />
-                    <p>{prop.name}</p>
-                  </NavLink>
-                </li>
-              );
-            })}
-          </Nav>
-        </div>
+
+    return function cleanup() {
+      if (navigator.platform.indexOf("Win") > -1) {
+        ps.destroy();
+      }
+    };
+  }, []);
+
+  // verifies if routeName is the one active (in browser input)
+  const activeRoute = useCallback((routeName) => {
+    return props.location.pathname.indexOf(routeName) > -1 ? "active" : "";
+  }, []);
+
+  return (
+    <div className="sidebar" data-color={props.backgroundColor}>
+      <div className="logo">
+        <a
+          href="https://www.creative-tim.com?ref=nudr-sidebar"
+          className="simple-text logo-mini"
+          target="_blank"
+        >
+          <div className="logo-img">
+            <img src={logo} alt="react-logo" />
+          </div>
+        </a>
+        <a
+          href="https://www.creative-tim.com?ref=nudr-sidebar"
+          className="simple-text logo-normal"
+          target="_blank"
+        >
+          Creative Tim
+        </a>
       </div>
-    );
-  }
+      <div className="sidebar-wrapper" ref={sidebar}>
+        <Nav>
+          {props.routes.map((prop, key) => {
+            if (prop.redirect) return null;
+            return (
+              <li
+                className={
+                  activeRoute(prop.layout + prop.path) +
+                  (prop.pro ? " active active-pro" : "")
+                }
+                key={key}
+              >
+                <NavLink
+                  to={prop.layout + prop.path}
+                  className="nav-link"
+                  activeClassName="active"
+                >
+                  <i className={"now-ui-icons " + prop.icon} />
+                  <p>{prop.name}</p>
+                </NavLink>
+              </li>
+            );
+          })}
+        </Nav>
+      </div>
+    </div>
+  );
 }
 
 export default Sidebar;
